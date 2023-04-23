@@ -9,3 +9,19 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Quiz {
+  id        Int      @id @default(autoincrement())
+  name      String
+  // add the opposite relation field to Question
+  questions Question[]
+
+}
+
+model Question {
+  id        Int      @id @default(autoincrement())
+  text      String
+  answer    Boolean
+  quizId    Int
+  quiz      Quiz     @relation(fields: [quizId], references: [id])
+}

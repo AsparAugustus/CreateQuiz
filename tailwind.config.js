@@ -5,7 +5,10 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      body: ['Open Sans', 'sans-serif'],
+      heading: ['Montserrat', 'sans-serif'],
+    },
   },
   plugins: [],
 };

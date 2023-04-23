@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  overflow-x: hidden;
+}
+
+/* Colors */
+:root {
+  --color-primary: #4267b2;
+  --color-primary-hover: #3b5998;
+  --color-secondary: #1877f2;
+  --color-secondary-hover: #166fe5;
+  --color-background: bg-gray-900;
+  --color-text: #fff;
+  --color-text-secondary: #65676b;
+}
+
+/* Buttons */
+.button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Containers */
+.container {
+  background: linear-gradient(to bottom, #1a202c, #2d3748);
+  border: 3px solid #2d3748;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+input {
+  color: black;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-from-left {
+  animation: slideInFromLeft 0.5s ease-in-out;
+}
